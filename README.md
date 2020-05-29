@@ -9,7 +9,7 @@ The goal of this exercise is to become familiar with how to write your own funct
 ## Step 1
 Read the tutorial!
 
-This is the last section we will take from this introduction. Please read [Chapter 7, "Reading data from files"](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Reading-data-from-files). I explained the most things in the Zoom session as well.
+This is the last section we will take from this introduction. Please read [Chapter 7, "Reading data from files"](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Reading-data-from-files). I explained the most important things in the Zoom session as well.
 
 ## Step 2
 
