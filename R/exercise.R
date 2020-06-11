@@ -8,6 +8,8 @@ b <- readLines(con = "tokenized-juliet.txt")[[5]]
 c <- c(mean(nchar(readLines(con = "tokenized-juliet.txt"))), sd(nchar(readLines(con = "tokenized-juliet.txt"))))
 
 # d)
+setwd("Documents/Studium/Informationsverarbeitung/SS20/Quantitative Textanalyse mit R/exercise-06/data")
+
 s1 <- strsplit(readLines(con = "tokenized-juliet.txt"), "[.]")
 countJulSen <- 0
 for (i in 1:length(s1)) {
