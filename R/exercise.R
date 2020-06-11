@@ -10,30 +10,31 @@ c <- c(mean(nchar(readLines(con = "tokenized-juliet.txt"))), sd(nchar(readLines(
 # d)
 setwd("Documents/Studium/Informationsverarbeitung/SS20/Quantitative Textanalyse mit R/exercise-06/data")
 
-s1 <- strsplit(readLines(con = "tokenized-juliet.txt"), "[.]")
+
+s1 <- scan(file = "tokenized-juliet.txt", what = "character")
 countJulSen <- 0
 for (i in 1:length(s1)) {
-    countJulSen <- length(s1[[i]]) + countJulSen
+    if (s1[[i]] == "." | s1[[i]] == "?" | s1[[i]] == "!" ) 
+        countJulSen <- countJulSen + 1
 }
 
-s2 <- strsplit(readLines(con = "tokenized-romeo.txt"), "[.]")
+s2 <- scan(file = "tokenized-romeo.txt", what = "character")
 countRomSen <- 0
 for (i in 1:length(s2)) {
-    countRomSen <- length(s2[[i]]) + countRomSen
+    if (s2[[i]] == "." | s2[[i]] == "?" | s2[[i]] == "!" ) 
+        countRomSen <- countRomSen + 1
 }
 
-s3 <- scan(file = "tokenized-romeo.txt", what = "character")
 countRomWords <- 0 
-for(i in 1:length(s3)) {
-    if (s3[[i]] != "." & s3[[i]] != "," & s3[[i]] != "!" & s3[[i]] != "?" & s3[[i]] != "-") {
+for(i in 1:length(s2)) {
+    if (s2[[i]] != "." & s2[[i]] != "," & s2[[i]] != "!" & s2[[i]] != "?" & s2[[i]] != "-" & s2[[i]] != "" & s2[[i]] != ";") {
         countRomWords <- countRomWords + 1
     }
 }
 
-s4 <- scan(file = "tokenized-juliet.txt", what = "character")
 countJulWords <- 0 
-for(i in 1:length(s4)) {
-    if (s4[[i]] != "." & s4[[i]] != "," & s4[[i]] != "!" & s4[[i]] != "?" & s3[[i]] != "-") {
+for(i in 1:length(s1)) {
+    if (s1[[i]] != "." & s1[[i]] != "," & s1[[i]] != "!" & s1[[i]] != "?" & s1[[i]] != "-" & s1[[i]] != "" & s1[[i]] != ";") {
         countJulWords <- countJulWords + 1
     }
 }
@@ -48,4 +49,13 @@ d <- data.frame("name" = c("Romeo", "Juliet"), "numSentences" = c(countRomSen, c
 x <- read.table(file = "romeo-and-juliet.csv", sep = ",")
 e <- x[[14, 2]]
 
+
+    
+
+    
+    
+    
+    
+    
+    
     
