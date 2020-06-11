@@ -8,7 +8,7 @@ b <- readLines(con = "tokenized-juliet.txt")[[5]]
 c <- c(mean(nchar(readLines(con = "tokenized-juliet.txt"))), sd(nchar(readLines(con = "tokenized-juliet.txt"))))
 
 # d)
-setwd("Documents/Studium/Informationsverarbeitung/SS20/Quantitative Textanalyse mit R/exercise-06/data")
+setwd("/Users/Christy Man/Documents/Studium/Informationsverarbeitung/SS20/Quantitative Textanalyse mit R/exercise-06/data")
 
 
 s1 <- scan(file = "tokenized-juliet.txt", what = "character")
@@ -50,10 +50,6 @@ x <- read.table(file = "romeo-and-juliet.csv", sep = ",")
 e <- x[[14, 2]]
 
 
-    
-
-    
-    
     
     
     
