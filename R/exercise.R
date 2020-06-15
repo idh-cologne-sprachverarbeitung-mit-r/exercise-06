@@ -24,5 +24,4 @@ d <- data.frame(
 
 
 df <- read.csv("data/romeo-and-juliet.csv")
-print(df[order(-df$numOfWords),"name"])
-e <- df[order(-df$numOfWords),"name"][1]
+e <- as.character(df[order(-df$numOfWords),"name"][1])

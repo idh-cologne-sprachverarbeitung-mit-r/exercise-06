@@ -33,6 +33,5 @@ test_that("d) yields the correct result", {
 })
 
 test_that("e) yields the correct result", {
-	print(e)
 	expect_equal(e, "Romeo")
 })
